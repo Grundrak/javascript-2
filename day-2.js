@@ -18,10 +18,16 @@ function playRound(playerSelection, computerSelection) {
     // Check various win conditions for player and computer
     else if (playerSelection === 'rock' && computerSelection === 'paper') {
         return 'Pc rbah';
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return 'Ana rbaht'; 
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        return 'Pc rbah';
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         return 'Ana rbaht';
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return 'Pc rbah';
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return 'Ana rbaht';
     } else {
         return 'Ana rbaht';
     }
@@ -29,5 +35,4 @@ function playRound(playerSelection, computerSelection) {
 
 const playerSelection = 'rock'; // Replace with the actual player's choice
 const computerSelection = getComputerChoice(); // Assume you have a getComputerChoice function
-const result = playRound(playerSelection, computerSelection); // Determine the result of the round
-console.log(result); // Output the result to the console
+ playRound(playerSelection, computerSelection); // Output the result to the console
